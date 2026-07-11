@@ -44,9 +44,19 @@ Dos servicios desde el mismo repo:
 ### 2) Frontend
 
 - Root Directory: `frontend`
-- Variable: `VITE_API_URL=https://TU-BACKEND.up.railway.app`
-- Redeploy después de cambiar `VITE_API_URL`
+- Variable **obligatoria** (runtime, no hace falta rebuild de Vite):
+
+```text
+API_URL=https://pyanimation01-production.up.railway.app
+```
+
+  (usa el dominio real de tu servicio FastAPI)
+
+- También puedes usar `VITE_API_URL` (se lee en build y en runtime)
+- Redeploy del frontend después de guardar la variable
 - Generate Domain
+
+Si el chat dice error y abajo aparece `API (sin configurar)`, falta `API_URL`.
 
 ## API
 
